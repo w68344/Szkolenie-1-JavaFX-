@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="550.0" prefWidth="518.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab2_tech1_w68344.HelloController">
+   <children>
+      <MenuBar prefHeight="6.0" prefWidth="488.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeapp" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#helpMenu" text="Web Info" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" prefHeight="166.0" prefWidth="522.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="157.0">
+               <children>
+                  <RadioButton fx:id="radioBlue" mnemonicParsing="false" onMouseClicked="#coloreLblBlue" text="Niebieski">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="coloreSelekt" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioYellow" mnemonicParsing="false" onMouseClicked="#coloreLblYellow" text="Żóty" toggleGroup="$coloreSelekt">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </RadioButton>
+                  <RadioButton fx:id="radioRed" mnemonicParsing="false" onMouseClicked="#coloreLblRed" text="Czerwony" toggleGroup="$coloreSelekt">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="164.0">
+               <children>
+                  <RadioButton fx:id="radio1" mnemonicParsing="false" onMouseClicked="#textLblLab1" text="1">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="numberOfLab" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="radio2" mnemonicParsing="false" onMouseClicked="#textLblLab2" text="2" toggleGroup="$numberOfLab">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding></RadioButton>
+                  <RadioButton fx:id="radio3" mnemonicParsing="false" onMouseClicked="#textLblLab3" text="3" toggleGroup="$numberOfLab">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding></RadioButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="163.0">
+               <children>
+                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding></CheckBox>
+                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding></CheckBox>
+               </children>
+            </VBox>
+         </children></HBox>
+      <Label fx:id="leblLaboratorium" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="524.0" text="Laboratorium 2" textAlignment="CENTER" textFill="#000000">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TabPane prefHeight="240.0" prefWidth="535.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="169.0" prefWidth="486.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="173.0" prefWidth="250.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="RadioButton">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="RadioButton">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="RadioButton" textAlignment="CENTER">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                    </RadioButton>
+                                 </children></VBox>
+                              <VBox alignment="CENTER" prefHeight="170.0" prefWidth="236.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children></VBox>
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox layoutX="167.0" layoutY="73.0" prefWidth="150.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
