@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.lab1_tech1_w68344.HelloController">
+<VBox alignment="CENTER" prefHeight="369.0" prefWidth="322.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab1_tech1_w68344.CalkulatorController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <Label text="Wpisz liczbę niżej" />
+   <TextField fx:id="textFieldl1" onAction="#zaplicz1" promptText="Liczba 1">
+      <cursor>
+         <Cursor fx:constant="NONE" />
+      </cursor></TextField>
+   <TextField fx:id="textFieldl2" onAction="#zaplicz2" promptText="Liczba 2" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+         <Button id="butnDodawanie" fx:id="butnDodawanie" mnemonicParsing="false" onAction="#choseAktion" text="Dodawanie" />
+         <Button id="butnOdejmowanie"  fx:id="butnOdejmowanie" mnemonicParsing="false" onAction="#choseAktion" text="Odejmowanie" />
+         <Button id="butnMnozenie"  fx:id="butnMnozenie" mnemonicParsing="false" onAction="#choseAktion" text="Mnozenie" />
+
+   </HBox>
+   <Button id="btn" fx:id="btnObliczenie" mnemonicParsing="false" onAction="#butnprint" text="Oblicz" />
+   <Label fx:id="lbl1" text="Wynik pojawi tu:" />
 </VBox>
