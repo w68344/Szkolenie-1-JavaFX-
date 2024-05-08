@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.paint.Color;
@@ -12,9 +13,27 @@ import javafx.scene.image.ImageView;
 import java.awt.*;
 import java.net.URI;
 import java.net.URISyntaxException;
+import javafx. scene. control.ComboBox;
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.control.Label;
+import javafx.scene.control.ComboBox;
+import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
+import javafx.geometry.Orientation;
 
 public class HelloController
 {
+
  public Label leblLaboratorium;
  public RadioButton radioBlue;
  public RadioButton radioYellow;
@@ -62,6 +81,7 @@ public void textLblLab1 ()
     public RadioButton radioJava;
     public RadioButton radioKotlin;
     public RadioButton radioCsharp;
+    @FXML
     public ImageView logoImagine;
 
     public void czangeLogoJava()
@@ -85,7 +105,9 @@ public void textLblLab1 ()
     {
         logoImagine.setFitHeight(250);
         logoImagine.setFitWidth(250);
-
     }
+
+
+
 
 }

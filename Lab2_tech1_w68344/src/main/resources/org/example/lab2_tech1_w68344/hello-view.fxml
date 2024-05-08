@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -95,7 +97,7 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="190.0" prefWidth="252.0">
                                  <children>
-                                    <RadioButton fx:id="radioJava" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#czangeLogoJava" selected="true" text="JavaFX">
+                                    <RadioButton fx:id="radioJava" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#czangeLogoJava" text="JavaFX">
                                        <padding>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </padding>
@@ -116,10 +118,7 @@
                                  </children></VBox>
                               <VBox alignment="CENTER" prefHeight="176.0" prefWidth="249.0">
                                  <children>
-                                    <ImageView fx:id="logoImagine" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#loopLogo" onMouseExited="#loopOutLogo" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../../JavaFX_Logo.png" />
-                                       </image></ImageView>
+                                    <ImageView fx:id="logoImagine" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                                  </children></VBox>
                            </children>
                         </HBox>
@@ -130,7 +129,15 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ComboBox layoutX="167.0" layoutY="73.0" prefWidth="150.0" />
+                        <ComboBox fx:id="versja" layoutX="167.0" layoutY="73.0" prefWidth="150.0" promptText="versja...">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1,5" />
+                                    <String fx:value="2,4" />
+                                    <String fx:value="3,5" />
+                                </FXCollections>
+                            </items>
+                         </ComboBox>
                      </children></AnchorPane>
             </content>
           </Tab>
