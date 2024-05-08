@@ -4,33 +4,14 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.paint.Color;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
-
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import java.awt.*;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.List;
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-
-import javax.imageio.IIOException;
 
 public class HelloController
 {
@@ -77,6 +58,34 @@ public void textLblLab1 ()
     public void helpMenu (ActionEvent event) throws URISyntaxException, java.io.IOException
     {
         Desktop.getDesktop().browse(new URI("https://openjfx.io/"));
+    }
+    public RadioButton radioJava;
+    public RadioButton radioKotlin;
+    public RadioButton radioCsharp;
+    public ImageView logoImagine;
+
+    public void czangeLogoJava()
+    {
+        radioJava.setOnMouseClicked(e->     logoImagine.setImage(new Image("JavaFX_Logo.png")));
+    }
+    public void czangeLogoKotlin()
+    {
+        radioKotlin.setOnMouseClicked(e -> logoImagine.setImage(new Image("Kotlin Logo.png")));
+    }
+    public void czangeLogoCsharp()
+    {
+        radioCsharp.setOnMouseClicked(e -> logoImagine.setImage(new Image("Csharp Logo.png")));
+    }
+    public void loopLogo()
+    {
+        logoImagine.setFitHeight(450);
+        logoImagine.setFitWidth(450);
+    }
+    public void loopOutLogo()
+    {
+        logoImagine.setFitHeight(250);
+        logoImagine.setFitWidth(250);
+
     }
 
 }

@@ -87,40 +87,46 @@
          </font></Label>
       <TabPane prefHeight="240.0" prefWidth="535.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Logo">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="518.0">
                      <children>
                         <HBox prefHeight="169.0" prefWidth="486.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="173.0" prefWidth="250.0">
+                              <VBox alignment="CENTER" prefHeight="190.0" prefWidth="252.0">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton">
+                                    <RadioButton fx:id="radioJava" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#czangeLogoJava" selected="true" text="JavaFX">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="tab1" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioKotlin" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#czangeLogoKotlin" text="Kotlin" toggleGroup="$tab1">
                                        <padding>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </padding>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton">
-                                       <padding>
-                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                       </padding>
-                                    </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textAlignment="CENTER">
+                                    <RadioButton fx:id="radioCsharp" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#czangeLogoCsharp" text="C#" textAlignment="CENTER" toggleGroup="$tab1">
                                        <padding>
                                           <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                        </padding>
                                     </RadioButton>
                                  </children></VBox>
-                              <VBox alignment="CENTER" prefHeight="170.0" prefWidth="236.0">
+                              <VBox alignment="CENTER" prefHeight="176.0" prefWidth="249.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="logoImagine" fitHeight="150.0" fitWidth="200.0" onMouseEntered="#loopLogo" onMouseExited="#loopOutLogo" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../JavaFX_Logo.png" />
+                                       </image></ImageView>
                                  </children></VBox>
                            </children>
                         </HBox>
                      </children></AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="Versja">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
